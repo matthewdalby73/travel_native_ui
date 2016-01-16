@@ -83,3 +83,23 @@ function loadPointOfInterestData(poiData){
             });  
 }
 
+loadItinerary();
+
+function loadItinerary(){
+
+	var intinerary = {"dates" : [{"date_format" : "Monday, Feburary 1"},{"date_format" : "Tuesday, February 2"},{"date_format" : "Wednesday, February 3"}]};
+
+	$.ajax({
+                url: '/html/partials/itinerary-detail.html',
+                cache: false,
+                success: function (data) {
+                    source = data;
+                    template = Handlebars.compile(source);
+                    $('#itinerary-list-panel').html(template(intinerary));
+
+                }
+            });  
+
+}
+
+
