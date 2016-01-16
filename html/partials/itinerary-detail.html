@@ -1,0 +1,29 @@
+
+
+
+
+
+<ul class="list-group">
+  <li class="list-group-item active">Your Dates</li>
+  {{#each dates}}
+	  <li class="list-group-item">
+	    <div>{{date_format}}</div>
+	    <div>
+	        <span class="clickyActionIcon" onclick="hotelDetailSelected()">H</span>
+	        <span class="clickyActionIcon" onClick="restaurantDetailSelected()">R</span>
+	        <span class="clickyActionIcon" onClick="pointOfInterestDetailSelected()">I</span>    
+	    </div>
+	    <div><span>Your Hotel:</span><span>Please Select</span></div>
+	    <div><span>Dining:</span><span>Please Select</span></div>
+	    <div><span>Point of interest:</span><span>Please Select</span></div>
+		</li>
+	{{/each}}
+	  <li class="list-group-item">
+	    <div>Wednesday, Jan 6th</div>
+
+	</li>
+	  <li class="list-group-item">
+	    <div>Thursday, Jan 7th</div>
+
+	</li>
+</ul>
