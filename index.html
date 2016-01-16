@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
     </head>
     <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -30,18 +31,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Travel Native</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+          
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -51,7 +44,40 @@
       <div class="container">
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        
+
+        <div class="panel panel-default">
+  
+		    <div style="margin: 15px">
+		     
+		    	<form>
+				<div class="form-group">
+			        <label for="estination">Destination</label>
+			        <select id="destination" >
+			        	<option value="scotland" selected>Scotland</option>
+			        	<option value="colombia">Colombia</option>
+			        </select>  	
+			    </div>
+			    <div class="form-group">
+			        <label for="inputPassword">Password</label>
+			        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+			    </div>
+			    <div class="form-group">
+			    	<label for="duration">Duration</label>
+			    	<select id="duration" >
+			            <option value="1">1</option>
+			            <option value="2">2</option>
+			            <option value="3">3</option>  
+			          </select>     
+			    </div>
+			    <div>
+			    	<span class="btn btn-primary btn-lg" id="beginProcessButton" role="button">Get Started!</span>	
+			    </div>
+			</form>
+		    </div>
+		    
+		</div>
+
       </div>
     </div>
 
