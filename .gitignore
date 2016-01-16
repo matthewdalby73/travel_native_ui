@@ -3,3 +3,5 @@
 /.tmp
 /.sass-cache
 /bower_components
+
+html/partials/poi_selection.html

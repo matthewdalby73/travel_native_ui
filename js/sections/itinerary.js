@@ -1,5 +1,6 @@
 
 
+
 console.log("intinerary.js loaded");
 
 function hotelDetailSelected(){
@@ -34,41 +35,19 @@ function loadHotelSelectionPanel(hotelData){
             });   
 }
 
-function restaurantDetailSelected(){
-	console.log("restaurantDetailSelected()");
-
-
-	//TODO: Make ajax call
-		data = {"restaurants" : [{"name":"restaurant 1"},{"name":"restaurant 2"}]};
-		console.log("sdsa");
-
-	loadRestaurantData(data);
-}
-
-function loadRestaurantData(restaurantData){
-	$.ajax({
-                url: '/html/partials/restaurants_selection.html',
-                cache: false,
-                success: function (data) {
-                		console.log("121212121212");
-                		console.log(data);
-                    source = data;
-                    template = Handlebars.compile(source);
-                    $('#planner-detail-panel').html(template(restaurantData));
-
-                }
-            });  
-}
 
 function pointOfInterestDetailSelected(){
 	console.log("pointOfInterestDetailSelected()");
 
 	//TODO: Make ajax call
-		pointsOfInterest = [{"name":"attraction1"},{"name":"attraction2"}];
-		data = {"pointsOfInterest":pointsOfInterest};
+	pointsOfInterest = $.get('/event?city=MODESTO', function(data){
+		data = {"pointsOfInterest":data.results};
 
-	loadPointOfInterestData(data);
+		loadPointOfInterestData(data);
+	
+	})
 }  
+
 
 function loadPointOfInterestData(poiData){
 	$.ajax({
