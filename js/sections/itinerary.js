@@ -12,9 +12,16 @@ function hotelDetailSelected(){
 	}, 'html')
 	*/
 
-	hotelData = {};
+	// This would be data from a JSON call to the server, for now we hard code.
+	hotelData = { "hotels" : [ {"name":"hotel 1"},{"name":"hotel 2"}]};
 
-	 $.ajax({
+	//This is an a
+	 	loadHotelSelectionPanel(hotelData);
+
+}
+
+function loadHotelSelectionPanel(hotelData){
+	$.ajax({
                 url: '/html/partials/hotels_selection.html',
                 cache: false,
                 success: function (data) {
@@ -25,7 +32,6 @@ function hotelDetailSelected(){
 
                 }
             });   
-
 }
 
 function restaurantDetailSelected(){
