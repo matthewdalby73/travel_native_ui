@@ -1,5 +1,6 @@
 
 
+
 console.log("intinerary.js loaded");
 
 function hotelDetailSelected(){
@@ -42,3 +43,16 @@ function pointOfInterestDetailSelected(){
 	console.log("pointOfInterestDetailSelected()");
 }  
 
+function getRestaurants(city) {
+	$.get(url: "http://localhost:3000/restaurant?city=" + city, dataType: "application/json", success: displayRestaurants(data))
+};
+
+function displayRetaurants(data){
+	var out = "<ul>";
+
+	for(var i=0, l=data.results.length; i<l; i++) {
+		out = out + "<li>" + data.results[i].name + "</li>";
+	}
+
+	$("#restaurants_div").html( out + "</ul>");
+}
