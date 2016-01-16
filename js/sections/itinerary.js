@@ -64,10 +64,12 @@ function pointOfInterestDetailSelected(){
 	console.log("pointOfInterestDetailSelected()");
 
 	//TODO: Make ajax call
-		pointsOfInterest = [{"name":"attraction1"},{"name":"attraction2"}];
-		data = {"pointsOfInterest":pointsOfInterest};
+	pointsOfInterest = $.get('/event?city=MODESTO', function(data){
+		data = {"pointsOfInterest":data.results};
 
-	loadPointOfInterestData(data);
+		loadPointOfInterestData(data);
+	
+	})
 }  
 
 function loadPointOfInterestData(poiData){

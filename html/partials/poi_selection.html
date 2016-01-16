@@ -1,7 +1,9 @@
 <h2>Select an attraction</h2>
 
-{{#each pointsOfInterest}}
+{{#each pointsOfInterest.items}}
 <div>
-	<b>{{name}}</b>
+	<b>{{title}}</b> <span style="float: right">Rating {{averageRating}}</span><br/>
+	Hours: {{openingHours.text}}
+	
 </div>
 {{/each}}

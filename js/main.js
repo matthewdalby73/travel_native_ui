@@ -15,7 +15,7 @@ $("#beginProcessButton").click(
 //
 
 	$.ajax({
-	     url: '/services/new',
+	     url: '/trip',
 	     	type: "POST",
 	     	data: request,
 	     	dataType: "json",
