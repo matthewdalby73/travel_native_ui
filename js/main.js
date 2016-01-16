@@ -23,7 +23,13 @@ $("#beginProcessButton").click(
 	     })
 	     .done(function (data) {
 	     	console.log("Response " + JSON.stringify(data));
-	     	
+
+			$("body").fadeOut(1000, redirectPage);  
+
+			function redirectPage() {
+		        window.location = '/html/master_layout.html';
+		    }
+
 	     });
 //
 
