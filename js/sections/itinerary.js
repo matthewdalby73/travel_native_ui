@@ -36,14 +36,20 @@ function loadHotelSelectionPanel(hotelData){
 }
 
 function restaurantDetailSelected(){
-	console.log("restaurantDetailSelected()");
 
+	// data = {"restaurants" : [{"name":"restaurant 1"},{"name":"restaurant 2"}]};
+	console.log("sdsa");
+	$.get("http://localhost:3000/restaurant?city=modesto.json", function(data){
+		// console.log(data)
+		restaurants = []
+		for (var i = data.results.length - 1; i >= 0; i--) {
+			restaurants.push({"name": data.results[i].name})
+		};
+		console.log(restaurants)
+		data = {"restaurants" : restaurants}
+		loadRestaurantData(data)
+	})
 
-	//TODO: Make ajax call
-		data = {"restaurants" : [{"name":"restaurant 1"},{"name":"restaurant 2"}]};
-		console.log("sdsa");
-
-	loadRestaurantData(data);
 }
 
 function loadRestaurantData(restaurantData){
@@ -72,7 +78,7 @@ function pointOfInterestDetailSelected(){
 }  
 
 function getRestaurants(city) {
-	$.get(url: "http://localhost:3000/restaurant?city=" + city, dataType: "application/json", success: displayRestaurants(data))
+	$.get({url: "http://localhost:3000/restaurant?city=" + city, dataType: "application/json", success: displayRestaurants(data)})
 };
 
 function displayRetaurants(data){
