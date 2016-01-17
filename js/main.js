@@ -27,6 +27,7 @@ $("#beginProcessButton").click(
 			$("body").fadeOut(1000, redirectPage);  
 
 			function redirectPage() {
+				window.myObj = {_id: data._id}
 		        window.location = '/html/master_layout.html';
 		    }
 
