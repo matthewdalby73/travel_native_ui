@@ -1,9 +1,6 @@
-<h2>Select an attraction</h2>
-
-{{#each pointsOfInterest.items}}
-<div>
-	<b>{{title}}</b> <span style="float: right">Rating {{averageRating}}</span><br/>
-	Hours: {{openingHours.text}}
-	
-</div>
-{{/each}}
+<ul class="list-group">
+	<li href="#" class="list-group-item active">Attraction in {{city_name}}</li>
+	{{#each pointsOfInterest.items}}
+	<li class="list-group-item"><span class="badge">Rating {{averageRating}}</span>{{title}} - Hours: {{openingHours.text}}</li>
+	{{/each}}	
+</ul>

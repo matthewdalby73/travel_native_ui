@@ -1,8 +1,8 @@
-function restaurantDetailSelected(){
+function restaurantDetailSelected(cityname){
 
 	// data = {"restaurants" : [{"name":"restaurant 1"},{"name":"restaurant 2"}]};
-	console.log("sdsa");
-	$.get("http://localhost:3000/restaurant?city=modesto.json", function(data){
+	console.log(cityname);
+	$.get("restaurant?city=" + cityname, function(data){
 		// console.log(data)
 		restaurants = []
 		for (var i = data.results.length - 1; i >= 0; i--) {

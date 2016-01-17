@@ -15,6 +15,6 @@ function generateHotelList(cityname){
 			htmlText = htmlText + "</ul>";
 		    console.log("htmlText " + htmlText);
 
-			$("#itinerary-right-most-info").html(htmlText);  
+			$("#planner-detail-panel").html(htmlText);  
 	});
 }
