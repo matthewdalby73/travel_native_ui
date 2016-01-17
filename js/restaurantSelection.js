@@ -3,7 +3,7 @@ function restaurantDetailSelected(cityindex){
 
 	// data = {"restaurants" : [{"name":"restaurant 1"},{"name":"restaurant 2"}]};
 	console.log(cityname);
-	$.get("restaurant?city=" + cityname, function(data){
+	$.get("/restaurant?city=" + cityname, function(data){
 		// console.log(data)
 		restaurants = []
 		for (var i = data.results.length - 1; i >= 0; i--) {
