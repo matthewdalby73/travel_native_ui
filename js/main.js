@@ -2,12 +2,12 @@
 $("#beginProcessButton").click(
 	function(){
 
-		destination = $("#destination").val();
-		duration = $("#duration").val();
+		destination = encodeURIComponent($("#destination").val())
+		duration = encodeURIComponent($("#duration").val());
 
 		console.log("Beggining process: destination=>"+ destination +", duration=>"+ duration);
 
-		var request = { destination: destination };
+		var request = { destination: destination, duration: duration };
 
 		console.dir(request);
 
@@ -15,9 +15,9 @@ $("#beginProcessButton").click(
 //
 
 	$.ajax({
-	     url: '/trip',
+	     url: '/trip?destination=' + destination + "&duration=" + duration,
 	     	type: "POST",
-	     	data: request,
+	     	data: JSON.stringify(request),
 	     	dataType: "json",
 	     	contentType: "application/json"
 	     })
