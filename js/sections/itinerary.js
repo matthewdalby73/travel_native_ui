@@ -36,8 +36,9 @@ function loadHotelSelectionPanel(hotelData){
 }
 
 
-function pointOfInterestDetailSelected(cityname){
+function pointOfInterestDetailSelected(cityindex){
 	console.log("pointOfInterestDetailSelected()");
+    var cityname = $("#city_" + cityindex).html();
 
 	//TODO: Make ajax call
 	pointsOfInterest = $.get('/event?city=' + cityname, function(data){

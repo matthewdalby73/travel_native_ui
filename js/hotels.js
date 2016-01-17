@@ -1,7 +1,8 @@
-function generateHotelList(cityname){
+function generateHotelList(cityindex){
+	var cityname = $("#city_" + cityindex).html();
 	console.log("City name=>"+ cityname);
 	$.ajax({
-	     url: '/hotel?city='+cityname,
+	     url: '/hotel?city='+ cityname,
 	     	type: "GET"
 	     }).done(function (data) {
 			var htmlText = " <ul class=\"list-group\"><li href=\"#\" class=\"list-group-item active\">Hotels in "+ cityname + "</li>";

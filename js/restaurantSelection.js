@@ -1,4 +1,5 @@
-function restaurantDetailSelected(cityname){
+function restaurantDetailSelected(cityindex){
+	var cityname = $("#city_" + cityindex).html();
 
 	// data = {"restaurants" : [{"name":"restaurant 1"},{"name":"restaurant 2"}]};
 	console.log(cityname);
