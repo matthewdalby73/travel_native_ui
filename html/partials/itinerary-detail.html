@@ -9,14 +9,13 @@
 	  <li class="list-group-item">
 	    <div>{{date_format}}</div>
 	    <div>
-	        <span class="clickyActionIcon" onclick="hotelDetailSelected()">H</span>
-	        <span class="clickyActionIcon" onClick="restaurantDetailSelected()">R</span>
-	        <span class="clickyActionIcon" onClick="pointOfInterestDetailSelected()">I</span>    
+	        <span class="clickyActionIcon" onclick="generateHotelList('{{city_name}}')">Hotel</span>
+	        <span class="clickyActionIcon" onClick="restaurantDetailSelected('{{city_name}}')">Restaurants</span>
+	        <span class="clickyActionIcon" onClick="pointOfInterestDetailSelected('{{city_name}}')">Events</span>    
 	    </div>
 	    <div><span>Your Hotel:</span><span>Please Select</span></div>
 	    <div><span>Dining:</span><span>Please Select</span></div>
 	    <div><span>Point of interest:</span><span>Please Select</span></div>
 		</li>
 	{{/each}}
-
 </ul>

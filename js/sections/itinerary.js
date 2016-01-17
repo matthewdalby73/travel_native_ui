@@ -36,12 +36,12 @@ function loadHotelSelectionPanel(hotelData){
 }
 
 
-function pointOfInterestDetailSelected(){
+function pointOfInterestDetailSelected(cityname){
 	console.log("pointOfInterestDetailSelected()");
 
 	//TODO: Make ajax call
-	pointsOfInterest = $.get('/event?city=MODESTO', function(data){
-		data = {"pointsOfInterest":data.results};
+	pointsOfInterest = $.get('/event?city=' + cityname, function(data){
+		data = {"city_name" : cityname,"pointsOfInterest":data.results};
 
 		loadPointOfInterestData(data);
 	
@@ -66,7 +66,7 @@ loadItinerary();
 
 function loadItinerary(){
 
-	var intinerary = {"dates" : [{"date_format" : "Monday, Feburary 1"},{"date_format" : "Tuesday, February 2"},{"date_format" : "Wednesday, February 3"}]};
+	var intinerary = {"dates" : [{"date_format" : "Monday, Feburary 1", "city_name": "Modesto"},{"date_format" : "Tuesday, February 2", "city_name": "Modesto"},{"date_format" : "Wednesday, February 3", "city_name": "Modesto"}]};
 
 	$.ajax({
                 url: '/html/partials/itinerary-detail.html',
