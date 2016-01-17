@@ -69,7 +69,7 @@ function loadItinerary(){
 
 	var intinerary = {"dates" : [{"date_format" : "Monday, Feburary 1", "city_name": "Modesto"},{"date_format" : "Tuesday, February 2", "city_name": "Modesto"},{"date_format" : "Wednesday, February 3", "city_name": "Modesto"}]};
 
-    console.log(window.myObj._id )
+    // console.log(window.myObj._id )
 
 	$.ajax({
                 url: '/html/partials/itinerary-detail.html',
