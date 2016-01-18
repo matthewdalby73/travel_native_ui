@@ -1,7 +1,7 @@
 function listRestaurant(cityindex){
 	var cityname = $("#city_" + cityindex).html();
-	console.log(cityname);
-	$.get("/resturant?city=" + cityname, function(data){
+	console.log("city=" + cityname);
+	$.get("/restaurant?city=" + cityname, function(data){
 		restaurants = [];
 		for (var i = data.results.length - 1; i >= 0; i--) {
 			restaurants.push({
