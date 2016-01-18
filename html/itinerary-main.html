@@ -9,28 +9,20 @@
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
-        <script src="/js/vendor/handlebars-v4.0.5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/css/main.css">
-
-        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        
     </head>
     <body>
-  	
   		<div class="container">
-
     		<h1 class="page-header">Itinerary</h1>
-
     		<div class="panel panel-default">
 			  <div class="panel-heading">
 			    <h3 class="panel-title">Itinerary Planner</h3>
@@ -39,7 +31,6 @@
 			    This section will allow you to plan the important details of your trip such as Hotel and Dinner reservations.
 			  </div>
 			</div>
-
             <style>
                     .itinerary-day-cell{
                         border-style: solid;
@@ -51,48 +42,23 @@
                         margin: 5px;
                         width: 30px;
                     }
-
             </style>
-
-
             <!-- BEGIN: Itinerary planner section. -->
                 <div class="container">
                     <div class="row">                        
-                        <!-- BEGIN: Itinerary panel -->
-                            <div class="col-md-4" id="itinerary-list-panel">
-                                
-                            </div>
-                        <!-- END: Itinerary panel -->
-
-                        <!-- BEGIN: Planner detail panel -->
-                            <div class="col-md-4" id="planner-detail-panel">
-                            </div>
-
-                        <!-- END: Planner detail panel -->
+                            <div class="col-md-4" id="itinerary-list-panel"></div>
+                            <div class="col-md-4" id="planner-detail-panel"></div>
                     </div>
                 </div>
-            <!-- END: Itinerary planner section. -->
-
-          
-    		
 		      <footer>
 		        <p>&copy; Travel Native</p>
 		      </footer>ddd
-    
     	</div> 
-        <script src="/js/vendor/jquery-1.11.2.js"></script>
-
-        <script src="/js/vendor/bootstrap.min.js"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="/js/sections/itinerary.js"></script>
-
-
- <script src="/js/hotelSelection.js"></script>
- <script src="/js/restaurantSelection.js"></script>
- <script src="/js/pointOfInterestSelection.js"></script>
- <script src="/js/hotels.js"></script>
-
-
-
+        <script src="/js/sections/restaurant.js"></script>
+        <script src="/js/sections/poi.js"></script>
+        <script src="/js/sections/hotel.js"></script>
     </body>
 </html>
